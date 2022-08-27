@@ -17,7 +17,8 @@ const StorySchema = new mongoose.Schema({
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: true,
+    ref: 'User',
+    required: true
   },
   createdAt: {
     type: Date,
