@@ -20,3 +20,8 @@ p{
 .img-small{
   width: 180px;
 }
+
+.index-header{
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
