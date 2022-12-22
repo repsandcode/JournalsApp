@@ -25,3 +25,11 @@ p{
   margin-top: 2rem;
   padding: 0 1rem;
 }
+
+.word-spacing{
+  word-spacing: .03rem;
+}
+
+.text-gray-700{
+  color: #495057;
+}
