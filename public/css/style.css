@@ -1,35 +1,134 @@
-p{
+body,
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.clear-margin{
+  margin: 0;
+}
+
+p {
   margin: 10px 0 !important;
 }
 
-.login-container{
+.login-container {
   width: 400px;
   margin-top: 50px;
   text-align: center;
 }
 
-.fa-small{
-  font-size: 16px !important;  
+.fa-small {
+  font-size: 16px !important;
 }
 
-.btn-float{
+.btn-float {
   float: left;
   margin-right: 10px;
 }
 
-.img-small{
+.img-small {
   width: 180px;
 }
 
-.index-header{
+.index-header {
   margin-top: 2rem;
   padding: 0 1rem;
 }
 
-.word-spacing{
+.word-spacing {
   word-spacing: .03rem;
 }
 
-.text-gray-700{
+.text-gray-700 {
   color: #495057;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.justify-center{
+  justify-content: center;  
+}
+
+.img-avatar {
+  /* width: 3rem; */
+  height: 3.2rem;
+  border-radius: 50%;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.mb-2{
+  margin-bottom: 2rem;
+}
+
+.mb-5{
+  margin-bottom: 5rem;
+}
+
+.text-sm{
+  font-size: .9rem;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+.text-normal{
+  font-weight: 500;
+}
+
+.text-gray{
+  color: #83878a;
+}
+
+.color-delete{
+  color: #F44336 ;
+}
+
+.color-edit{
+  color: #26a69a;
+}
+
+.btn-reset{
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: .3rem;
+}
+
+.btn-reset:focus{
+  background: none;
+}
+
+
+/* override materialize css */
+.remove-color{
+  background-color: transparent !important;
 }

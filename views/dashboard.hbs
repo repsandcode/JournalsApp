@@ -1,43 +1,69 @@
 <div class="row">
-  <h5 class="index-header">Dashboard</h5>
-
-  <h3>Welcome {{name}}</h3>
-
-  <p>Your journals</p>
+  <div class="index-header">
+    <h5>Dashboard</h5>
+    <h3>Hello, {{name}}!</h3>
+  </div>
 </div>
 
 {{#if stories}}
-  <table class="striped">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Date</th>
-        <th>Status</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each stories}}
-        <tr>
-          <td><a href="/stories/{{_id}}">{{title}}</a></td>
-          <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
-          <td><span class="dash-status">{{status}}</span></td>
-          <td>
-            <a href="/stories/edit/{{_id}}" class="btn btn-float">
-              <i class="fas fa-edit"></i>
+<div class="row">
+  {{#each stories}}
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-image">
+        {{!-- blank --}}
+      </div>
+      <div class="card-content">
+
+        <div class="flex justify-between mb-2">
+          <h5 class="clear-margin">{{title}}</h5>
+
+          <div class="flex">
+            <a href="/stories/edit/{{_id}}">
+              <button class="btn-reset">
+                <i class="fas fa-edit color-edit"></i>
+              </button>
             </a>
 
-            <form action="/stories/{{_id}}" method="POST" id="delete-form">
+            <form action="/stories/{{_id}}" method="POST" class="" id="delete-form">
               <input type="hidden" name="_method" value="DELETE">
-              <button type="submit" class="btn red">
-                <i class="fas fa-trash"></i>
+              <button type="submit" class="btn-reset">
+                <i class="fas fa-trash color-delete"></i>
               </button>
+              </a>
             </form>
-          </td>
-        </tr>
-      {{/each}}
-    </tbody>
-  </table>
+          </div>
+        </div>
+
+
+        <p>
+          {{stripTags (truncate body 50)}}
+        </p>
+      </div>
+
+      <div class="card-action">
+        {{!-- user avatar, name, date created --}}
+        <div class="flex">
+          <div class="flex flex-col justify-center">
+            <img src="{{user.image}}" class="img-avatar" alt="Google profile picture of {{user.displayName}}">
+          </div>
+          <div class="flex flex-col justify-center ml-1">
+            <span class="text-sm text-bold">{{user.displayName}}</span>
+            <span class="text-sm text-normal text-gray">{{formatDate createdAt 'MMMM D, YYYY'}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+
 {{else}}
-  <p>You have not created a journal yet. Express yourself and make one now!</p>
+
+<div class="row">
+  <div class="index-header">
+    <p>You have not created a journal yet. Express yourself and make one now!</p>
+  </div>
+</div>
 {{/if}}
