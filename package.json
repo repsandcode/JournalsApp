@@ -4,7 +4,8 @@
   "description": "App to put your thoughts and ideas in the best and simplest way possible",
   "main": "app.js",
   "scripts": {
-    "start": "npm-run-script-build && cross-env NODE_ENV=production node app"
+    "start": "npm-run-script-build && node app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app"
   },
   "author": "Albert Jonathan Borja",
   "license": "MIT",
