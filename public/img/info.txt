@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Montserrat-Medium
+font link: https://fonts.google.com/specimen/Montserrat
+font author: Julieta Ulanovsky
+font author site: http://www.zkysky.com.ar/
+
+
+icon designer: ChangHoon Baek
+icon designer link: /changhoon.baek.50
+        
+{"bg":"#81AAD9","icon":"#F2CCB1","font":"#ffffff","slogan":"#ffffff"}
+      
