@@ -1,43 +1,41 @@
 <div class="row">
-    <div class="col s12 m8">
+    <div class="col s12">
         <div class="row">
             <div class="card story">
-                <div class="card-content">
-                    <div class="flex justify-between mb-2">
-                        <h5 class="text-bold mb-1point5">{{story.title}}</h5>
-
+                <div class="card-content mb-4">
+                    <div class="flex justify-between mb-4">
+                        <div>
+                            <h5 class="text-bold">{{story.title}}</h5>
+                            <span class="text-sm text-normal text-gray">Created {{formatDate createdAt 'D MMMM YYYY'}}</span>
+                        </div>
                         <span class="text-sm">{{{editIcon story.user user story._id false}}}</span>
                     </div>
+                    
                     {{{story.body}}}
                 </div>
-            </div>
-        </div>
 
-    </div>
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-content">
-                <p class="text-bold">Author</p>
+                <div class="card-content">
+                    <p class="text-bold">Author</p>
 
-                <div class="flex">
-                    <div class="flex flex-col justify-center">
-                        <img src="{{story.user.image}}" referrerpolicy="no-referrer" class="img-avatar" alt="Google profile picture of {{story.user.displayName}}">
-                    </div>
-                    <div class="flex flex-col justify-center ml-1">
-                        <span class="text-sm text-bold">{{story.user.displayName}}</span>
-                        <span class="text-sm text-normal text-gray">Awesome human being</span>
+                    <div class="flex">
+                        <div class="flex flex-col justify-center">
+                            <img src="{{story.user.image}}" referrerpolicy="no-referrer" class="img-avatar"
+                                alt="Google profile picture of {{story.user.displayName}}">
+                        </div>
+                        <div class="flex flex-col justify-center ml-1">
+                            <span class="text-sm text-bold">{{story.user.displayName}}</span>
+                            <span class="text-sm text-normal text-gray">Awesome human being</span>
+                        </div>
                     </div>
                 </div>
 
-                
-                
-                {{!Change: add 'referrerpolicy="no-referrer"' to stop Google from blocking access to the profile
-                images}}
+
+                <div class="card-action">
+                    <a href="/stories/user/{{story.user._id}}">More From {{story.user.firstName}}</a>
+                </div>
 
             </div>
-            <div class="card-action">
-                <a href="/stories/user/{{story.user._id}}">More From {{story.user.firstName}}</a>
-            </div>
         </div>
+
     </div>
 </div>
