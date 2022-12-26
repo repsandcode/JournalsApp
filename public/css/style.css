@@ -58,6 +58,34 @@ p {
 }
 
 
+/* LOGO AND LOGIN */
+.logo-icon-color{
+  color: #f2ccb1;
+}
+
+.card-color{
+  background: #81aad9;
+}
+
+.login-button{
+  background: #6798d1;
+}
+
+.login-button:hover{
+  background: #5a90cd;
+  color: #f2ccb1;
+}
+
+.logo-size{
+  width: 15rem;
+}
+
+.vh-100{
+  height: 100vh;
+}
+
+
+/* FLEX SYSTEM */
 .flex {
   display: flex;
 }
@@ -77,6 +105,9 @@ p {
 .align-center{
   align-items: center;
 }
+
+
+
 
 .img-avatar {
   /* width: 3rem; */
@@ -108,8 +139,20 @@ p {
   margin-bottom: 5rem;
 }
 
+.p-1{
+  padding: 1rem;
+}
+
+.p-2{
+  padding: 2rem;
+}
+
 .text-sm{
   font-size: .9rem;
+}
+
+.text-md{
+  font-size: 1.2rem;
 }
 
 .text-bold{
@@ -122,6 +165,10 @@ p {
 
 .text-gray{
   color: #83878a;
+}
+
+.text-white{
+  color: #fff;
 }
 
 .color-delete{
