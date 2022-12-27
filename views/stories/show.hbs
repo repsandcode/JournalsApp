@@ -6,7 +6,7 @@
                     <div class="flex justify-between mb-4">
                         <div>
                             <h5 class="text-bold">{{story.title}}</h5>
-                            <span class="text-sm text-normal text-gray">Created {{formatDate createdAt 'D MMMM YYYY'}}</span>
+                            <span class="text-sm text-normal text-gray">Created {{formatDate story.createdAt 'D MMMM YYYY'}}</span>
                         </div>
                         <span class="text-sm">{{{editIcon story.user user story._id false}}}</span>
                     </div>

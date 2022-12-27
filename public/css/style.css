@@ -3,6 +3,14 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
+:root {
+  --lightblue1: #81aad9;
+  --lightblue2: #6798d1;
+  --lightblue3: #5a90cd;
+  --peach: #f2ccb1;
+  --red: #F44336;
+}
+
 /* Clear fix hack */
 .clearfix:after {
   content: ".";
@@ -60,15 +68,15 @@ p {
 
 /* LOGO AND LOGIN */
 .logo-icon-color {
-  color: #f2ccb1;
+  color: var(--peach);
 }
 
 .card-color {
-  background: #81aad9;
+  background: var(--lightblue1);
 }
 
 .login-button {
-  background: #6798d1;
+  background: var(--lightblue2);
   height: 54px;
   line-height: 54px;
   font-size: 15px;
@@ -87,8 +95,8 @@ p {
 }
 
 .login-button:hover {
-  background: #5a90cd;
-  color: #f2ccb1;
+  background: var(--lightblue3);
+  color: var(--peach);
 }
 
 .logo-size {
@@ -186,12 +194,39 @@ p {
   color: #fff;
 }
 
+
+
+/* dashboard, header, index, etc. */
+.bg-link{
+  background: rgba(0,0,0,0.05);
+}
+
+.bg-delete {
+  background: var(--red);
+}
+
+.bg-save {
+  background: var(--lightblue3);
+}
+
+.bg-edit {
+  background: var(--lightblue1);
+}
+
+.bg-edit:hover {
+  background: var(--lightblue2);
+}
+
 .color-delete {
-  color: #F44336;
+  color: var(--red);
 }
 
 .color-edit {
-  color: #26a69a;
+  color: var(--lightblue1);
+}
+
+.color-link {
+  color: var(--lightblue3);
 }
 
 .btn-reset {
@@ -203,6 +238,30 @@ p {
 
 .btn-reset:focus {
   background: none;
+}
+
+.add-btn {
+  background-color: var(--lightblue2);
+}
+
+.add-btn:hover {
+  background-color: var(--lightblue3);
+}
+
+.nav-color {
+  background: var(--lightblue1);
+}
+
+.nav-color>li a {
+  color: #fff;
+}
+
+.nav-color>li a:hover {
+  color: var(--peach);
+}
+
+.logo-header {
+  vertical-align: middle;
 }
 
 
